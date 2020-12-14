@@ -20,9 +20,9 @@ function Tabs() {
     return (
         <div>
             <ul className="tabs-nav">
-                <li className={activeTab === 1 ? 'active' : ''}><a href="javascript:;" onClick={() => changeActiveTab(1)}>Tab 1</a></li>
-                <li className={activeTab === 2 ? 'active' : ''}><a href="javascript:;" onClick={() => changeActiveTab(2)}>Tab 2</a></li>
-                <li className={activeTab === 3 ? 'active' : ''}><a href="javascript:;" onClick={() => changeActiveTab(3)}>Tab 3</a></li>
+                <li className={activeTab === 1 ? 'active' : ''}><button onClick={() => changeActiveTab(1)}>Tab 1</button></li>
+                <li className={activeTab === 2 ? 'active' : ''}><button onClick={() => changeActiveTab(2)}>Tab 2</button></li>
+                <li className={activeTab === 3 ? 'active' : ''}><button onClick={() => changeActiveTab(3)}>Tab 3</button></li>
             </ul>
             <div className="tabs-content">
                 {tabContent}

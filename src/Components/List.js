@@ -9,10 +9,27 @@ function List() {
     ]);
     const [newTaskName, setNewTaskName] = useState('');
     const addTask = () => {
-        const newTasks = [...tasks, newTaskName]
+        const newTasks = [newTaskName, ...tasks]
+
+        // const newTasks = [];
+        // for (const task of tasks) {
+        //     newTasks.push(task);
+        // }
+        // newTasks.push(newTaskName);
         setTasks(newTasks);
+        setNewTaskName('');
     }
     const listElements = tasks.map((task, index) => <li key={index}>{task}</li>);
+
+    // const listElements = tasks.map((task, index) => {
+    //     return <li key={index}>{task}</li>;
+    // });
+
+    // const listElements = [];
+    // for (let taskIndex in tasks) {
+    //     const task = tasks[taskIndex];
+    //     listElements.push(<li key={taskIndex}>{task}</li>)
+    // }
 
     return (
         <div>
